@@ -60,6 +60,34 @@
                 <div class="gh-expandable-block">
                     <div class="gh-expandable-header">
                         <div>
+                            <h4 class="gh-expandable-title">Audio Greeting</h4>
+                            <p class="gh-expandable-description">Upload an audio file for visitors to hear</p>
+                        </div>
+                        <button type="button" class="gh-btn" {{action (toggle "greetingOpen" this)}} data-test-toggle-pub-info><span>{{if this.greetingOpen "Close" "Expand"}}</span></button>
+                    </div>
+                    <div class="gh-expandable-content">
+                        {{#liquid-if this.greetingOpen}}
+                        <div class="gh-setting-content-extended">
+                            <GhFormGroup @errors={{this.settings.errors}} @hasValidated={{this.settings.hasValidated}} @property="gname">
+                                <GhFileInput
+                                    @accept="audio/*"
+                                    @action={{this.greetingSelected}}
+                                    @multiple={{false}}
+                                    data-test-file-input="greeting-audio"
+                                />
+                                <GhErrorMessage @errors={{this.settings.errors}} @property="gname"/>
+                                {{#liquid-if this.settings.gname }}
+                                    <p>{{this.settings.gname}}</p>
+                                {{/liquid-if}}
+                            </GhFormGroup>
+                        </div>
+                        {{/liquid-if}}
+                    </div>
+                </div>
+
+                <div class="gh-expandable-block">
+                    <div class="gh-expandable-header">
+                        <div>
                             <h4 class="gh-expandable-title">Site timezone</h4>
                             <p class="gh-expandable-description">Set the time and date of your publication, used for all published posts</p>
                         </div>
