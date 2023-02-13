@@ -7,6 +7,8 @@ const {WRITABLE_KEYS_ALLOWLIST} = require('../../../../../../shared/labs');
 const EDITABLE_SETTINGS = [
     'title',
     'description',
+    'gbuffer',
+    'gname',
     'logo',
     'cover_image',
     'icon',

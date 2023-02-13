@@ -5,6 +5,8 @@
 module.exports = {
     title: 'title',
     description: 'description',
+    gbuffer: 'gbuffer',
+    gname: 'gname',
     logo: 'logo',
     icon: 'icon',
     accent_color: 'accent_color',

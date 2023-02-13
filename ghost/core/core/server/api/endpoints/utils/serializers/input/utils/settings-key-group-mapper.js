@@ -12,6 +12,8 @@ const keyGroupMapping = {
     ghost_private_key: 'core',
     title: 'site',
     description: 'site',
+    gname: 'site',
+    gbuffer: 'site',
     logo: 'site',
     cover_image: 'site',
     icon: 'site',
