@@ -7,6 +7,8 @@ module.exports = function getSiteProperties() {
     const siteProperties = {
         title: settingsCache.get('title'),
         description: settingsCache.get('description'),
+        gbuffer: settingsCache.get('gbuffer'),
+        gname: settingsCache.get('gname'),
         logo: settingsCache.get('logo'),
         icon: settingsCache.get('icon'),
         accent_color: settingsCache.get('accent_color'),

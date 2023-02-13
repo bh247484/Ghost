@@ -9,6 +9,8 @@ module.exports = {
             site: _.pick(data, [
                 'title',
                 'description',
+                'gname',
+                'gbuffer',
                 'logo',
                 'icon',
                 'accent_color',

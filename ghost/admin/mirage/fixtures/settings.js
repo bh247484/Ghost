@@ -24,6 +24,8 @@ export default [
     // SITE
     setting('site', 'title', 'Test Blog'),
     setting('site', 'description', 'Thoughts, stories and ideas'),
+    setting('site', 'gbuffer', null),
+    setting('site', 'gname', null),
     setting('site', 'logo', '/content/images/2013/Nov/logo.png'),
     setting('site', 'cover_image', '/content/images/2014/Feb/cover.jpg'),
     setting('site', 'icon', '/content/images/2014/Feb/favicon.ico'),

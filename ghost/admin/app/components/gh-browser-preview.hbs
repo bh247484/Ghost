@@ -12,6 +12,12 @@
                     {{/if}}
                     <span class="site-title">{{or @title this.settings.title}}</span>
                 </div>
+                {{#if @site.gbuffer}}
+                    <div style="margin-bottom:8px;margin-top:12px;">- Audio Greeting -</div>
+                    <audio controls="controls">
+                        <source src="{{@site.gbuffer}}">
+                    </audio>
+                {{/if}}
             </div>
         </div>
     {{/unless}}

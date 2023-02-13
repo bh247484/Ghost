@@ -7,6 +7,8 @@ const keyTypeMapping = {
     ghost_private_key: 'string',
     title: 'string',
     description: 'string',
+    gbuffer: 'string',
+    gname: 'string',
     logo: 'string',
     cover_image: 'string',
     icon: 'string',

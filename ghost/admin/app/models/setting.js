@@ -6,6 +6,8 @@ export default Model.extend(ValidationEngine, {
 
     title: attr('string'),
     description: attr('string'),
+    gbuffer: attr('string'),
+    gname: attr('string'),
     logo: attr('string'),
     coverImage: attr('string'),
     icon: attr('string'),
