@@ -71,13 +71,21 @@
                             <GhFormGroup @errors={{this.settings.errors}} @hasValidated={{this.settings.hasValidated}} @property="gname">
                                 <GhFileInput
                                     @accept="audio/*"
-                                    @action={{this.greetingSelected}}
+                                    @action={{this.uploadGreeting}}
                                     @multiple={{false}}
                                     data-test-file-input="greeting-audio"
                                 />
                                 <GhErrorMessage @errors={{this.settings.errors}} @property="gname"/>
                                 {{#liquid-if this.settings.gname }}
                                     <p>{{this.settings.gname}}</p>
+                                    <button
+                                        class="gh-btn-red"
+                                        style="margin-top:8px;padding:4px;border-radius:8px;"
+                                        type="button"
+                                        {{on "click" (fn this.removeGreeting)}}
+                                    >
+                                        Remove Greeting
+                                    </button>
                                 {{/liquid-if}}
                             </GhFormGroup>
                         </div>

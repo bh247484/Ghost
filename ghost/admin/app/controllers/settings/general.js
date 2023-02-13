@@ -90,7 +90,7 @@ export default class GeneralController extends Controller {
     }
 
     @action
-    greetingSelected(files) {
+    uploadGreeting(files) {
         const file = files[0];
         this.settings.gname = file.name;
         
@@ -101,6 +101,12 @@ export default class GeneralController extends Controller {
             base64Str = reader.result;
             this.settings.gbuffer = base64Str;
         };
+    }
+
+    @action
+    removeGreeting() {
+        this.settings.gname = '';
+        this.settings.gbuffer = '';
     }
 
     @action
